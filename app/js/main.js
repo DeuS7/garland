@@ -1,0 +1,1 @@
+console.log("Die Wahl ist Qual");
