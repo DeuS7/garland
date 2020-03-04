@@ -7,7 +7,7 @@ let ballTemplate = document.querySelector(".ballElement.template");
 //One array to rule them all (Balls)
 let ballsArray = Array.prototype.slice.call(document.querySelectorAll(".ballElement:not(.template)"));
 
-let colors = ["crimson", "yellow", "green", "purple"];
+let colors = ["crimson", "yellowgreen", "green", "purple"];
 
 /*Code----------------------------------------------*/
 initBalls();

@@ -35,6 +35,16 @@ body {
 	height: 100px;
 	border-radius: 50%;
 	position: relative;
+	&:after {
+		content: "";
+		position: absolute;
+		top: 0;
+		right: 0;
+		left: 0;
+		bottom: 0;
+		border-radius: 50%;
+		background: hsla(0,0,255, 0);
+	}
 }
 
 
@@ -62,6 +72,7 @@ body {
 	display: none;
 }
 
+/* Keyframessss */
 @keyframes flying {
 	0% {
 		top: 0;
@@ -79,19 +90,36 @@ body {
 		top: 0;
 	}
 }
+@keyframes glowing {
+	0% {
+		background: hsla(0,0,255, 0);
+	}
+	50% {
+		background: hsla(0,0,255, 0.95);
+	}
+	100% {
+		background: hsla(0,0,255, 0);
+	}
+}
 
+
+/* Animation classes */
 .flyingBallAnim {
 	animation: flying 6s cubic-bezier(.3,.72,.85,.79) infinite;
 	&.even {
 		animation-direction: reverse;
 	}
 }
+.glowingAnim:after {
+	animation: glowing 2s cubic-bezier(.3,.72,.85,.79) infinite;
+}
 
+/* Colors */
 .crimson {
 	background: crimson;
 }
-.yellow {
-	background: yellow;
+.yellowgreen {
+	background: yellowgreen;
 }
 .green {
 	background: green;
