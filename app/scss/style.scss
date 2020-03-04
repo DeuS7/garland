@@ -35,6 +35,7 @@ body {
 	height: 50px;
 	border: 1px solid red;
 	border-radius: 50%;
+	position: relative;
 }
 
 
@@ -55,8 +56,34 @@ body {
 	font-size: 35px;
 	font-weight: bold;
 	cursor: pointer;
+	user-select: none;
 }
 
 .template {
 	display: none;
+}
+
+@keyframes flying {
+	0% {
+		top: 0;
+	}
+	25% {
+		top: -7px;
+	}
+	50% {
+		top: 0;
+	}
+	75% {
+		top: 7px;
+	}
+	100% {
+		top: 0;
+	}
+}
+
+.flyingBallAnim {
+	animation: flying 6s cubic-bezier(.3,.72,.85,.79) infinite;
+	&.even {
+		animation-direction: reverse;
+	}
 }

@@ -15,12 +15,20 @@ removeBallButton.addEventListener('click', function() {
 })
 
 function addBall() {
+	if (ballsArray.length > 10) return;
+
 	let clone = ballTemplate.cloneNode(true);
 	clone.classList.remove("template");
 
-	Array.prototype.push.call(ballsArray, clone);
+	if ((ballsArray.length+1) % 2 == 0) {
+		clone.querySelector('.ball').classList.add("even");
+	}
+
+	ballsArray.push(clone);
 	ballsLineElem.append(clone);
 }
 function removeBall() {
+	if (ballsArray.length < 2) return;
+
 	ballsArray.pop().remove();
 }
