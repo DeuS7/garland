@@ -14,11 +14,13 @@ body {
 .ballsLine {
   border: 1px solid red;
   display: flex;
-  justify-content: center; }
+  justify-content: center;
+  padding: 25px; }
 
 .ballElement {
   display: flex;
-  align-items: center; }
+  align-items: center;
+  margin-left: 5px; }
 
 .rope {
   width: 20px;
@@ -34,7 +36,20 @@ body {
 .controls {
   border: 1px solid red;
   display: flex;
-  justify-content: space-between; }
+  justify-content: center;
+  margin-top: 50px; }
+
+.button {
+  border: 1px solid red;
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+  line-height: 50px;
+  margin-left: 15px;
+  text-align: center;
+  font-size: 35px;
+  font-weight: bold;
+  cursor: pointer; }
 
 .template {
   display: none; }
