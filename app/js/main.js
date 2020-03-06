@@ -31,6 +31,7 @@ function addBall(amount = 1) {
 			cloneBall.classList.add("even");
 		}
 		cloneBall.classList.add(getRandomColor());
+        cloneBall.addEventListener("click", showEditingMenu);
 
 		ballsArray.push(clone);
 		ballsLineElem.append(clone);
@@ -49,4 +50,8 @@ function randomIntFromInterval(min, max) {
 }
 function getRandomColor() {
 	return colors[randomIntFromInterval(0, colors.length-1)];
+}
+function showEditingMenu() {
+  let editingMenuContainer = document.querySelector(".edit-menu");
+  editingMenuContainer.classList.remove("disabled");
 }

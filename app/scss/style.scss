@@ -47,16 +47,21 @@ body {
 	}
 }
 
-
-.controls {
+.block {
 	border: 1px solid red;
-	display: flex;
-	justify-content: center;
+	display: block;
 	margin-top: 50px;
 }
+
+.controls {
+  display: flex;
+  justify-content: center;
+}
+
 .button {
+    display: inline;
 	border: 1px solid red;
-	width: 50px;
+	min-width: 50px;
 	height: 50px;
 	border-radius: 5px;
 	line-height: 50px;
@@ -70,6 +75,26 @@ body {
 
 .template {
 	display: none;
+}
+
+.edit-menu {
+  opacity: 1;
+  display: flex;
+  justify-content: space-around;
+  transition: 0.2s linear all;
+}
+
+.colors-container {
+  display: flex;
+}
+
+.sizes-container {
+  display: flex;
+}
+
+.disabled {
+  opacity: 0;
+  height: 0;
 }
 
 /* Keyframessss */
